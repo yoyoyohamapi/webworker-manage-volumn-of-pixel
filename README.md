@@ -8,3 +8,4 @@
 ## 优化
 
 - [x] 使用 Typed Array 节约内存
+- [x] 使用多 worker 优化计算性能

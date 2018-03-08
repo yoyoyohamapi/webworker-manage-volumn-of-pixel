@@ -1,11 +1,10 @@
 importScripts('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js')
 this.onmessage = function(evt) {  
-  const data = evt.data;  // 第一层的像素数据
-  const dataLen = data.length
-  const volumnHeight = 512
+  const [data, volumnHeight] = evt.data;  // 第一层的像素数据
+  const dataLen = data[0].length
   const range = _.range(0, volumnHeight)
-  const arr1 = range.map(() => data)
-  const arr2 = range.map(() => data)
+  const arr1 = data
+  const arr2 = data
   // 在此对两个像素体数据做16位混色算法，合并两个像素体
   // http://blog.csdn.net/cuixiping/article/details/1698835 算法参考地址
   const arr = []
